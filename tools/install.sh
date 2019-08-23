@@ -35,7 +35,7 @@ install() {
   echo -e "$ansi_green Installing required packages... $ansi_std"
   opkg update
   opkg upgrade
-  opkg install haveged https_dns_proxy ipset iptables
+  opkg install haveged dnscrypt-proxy2_nohf ipset iptables
   /opt/etc/init.d/S02haveged start
 
   echo -e "$ansi_green Cloning shadowsocks-asuswrt-merlin... $ansi_std"

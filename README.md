@@ -109,7 +109,7 @@ Thanks for the following awesome projects ❤️
 - [asuswrt-merlin.ng](https://github.com/RMerl/asuswrt-merlin.ng)
 - [Entware](https://github.com/Entware/Entware)
 - [asuswrt-merlin-transparent-proxy](https://github.com/zw963/asuswrt-merlin-transparent-proxy)
-- [https_dns_proxy](https://github.com/aarond10/https_dns_proxy)
+- [dnscrypt-proxy2](https://github.com/jedisct1/dnscrypt-proxy)
 - [dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
 - [gfwlist](https://github.com/gfwlist/gfwlist)
 - [gfwlist2dnsmasq](https://github.com/cokebar/gfwlist2dnsmasq)

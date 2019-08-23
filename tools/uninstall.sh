@@ -30,7 +30,7 @@ uninstall() {
   cru d statistics
 
   echo -e "$ansi_green Removing packages... $ansi_std"
-  opkg remove --autoremove https_dns_proxy haveged
+  opkg remove --autoremove dnscrypt-proxy2_nohf haveged
 
   echo -e "$ansi_green Deleting system links... $ansi_std"
   rm -f /opt/bin/ss-merlin
