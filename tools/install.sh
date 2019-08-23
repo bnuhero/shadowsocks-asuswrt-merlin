@@ -35,11 +35,11 @@ install() {
   echo -e "$ansi_green Installing required packages... $ansi_std"
   opkg update
   opkg upgrade
-  opkg install haveged unbound ipset iptables
+  opkg install haveged https_dns_proxy ipset iptables
   /opt/etc/init.d/S02haveged start
 
   echo -e "$ansi_green Cloning shadowsocks-asuswrt-merlin... $ansi_std"
-  git clone --depth=1 https://github.com/Acris/shadowsocks-asuswrt-merlin.git "$SS_MERLIN_HOME" || {
+  git clone --depth=1 https://github.com/bnuhero/shadowsocks-asuswrt-merlin.git "$SS_MERLIN_HOME" || {
     echo -e "$ansi_red Error: git clone of shadowsocks-asuswrt-merlin repo failed. $ansi_std"
     exit 1
   }
@@ -58,6 +58,7 @@ install() {
 
   echo -e "$ansi_green Creating system links... $ansi_std"
   ln -sf ${SS_MERLIN_HOME}/bin/ss-merlin /opt/bin/ss-merlin
+  ln -sf ${SS_MERLIN_HOME}/bin/ss-local /opt/bin/ss-local
   ln -sf ${SS_MERLIN_HOME}/bin/ss-redir /opt/bin/ss-redir
   ln -sf ${SS_MERLIN_HOME}/bin/v2ray-plugin /opt/bin/v2ray-plugin
 
@@ -65,10 +66,6 @@ install() {
   if [[ ! -f /jffs/configs/dnsmasq.conf.add ]]; then
     touch /jffs/configs/dnsmasq.conf.add
   fi
-
-  set +e
-  # Remove default unbound start script
-  rm -f /opt/etc/init.d/S61unbound 2>/dev/null
 
   echo -e "$ansi_green Creating automatic upgrade cron jobs... $ansi_std"
   cru a upgrade-ss-merlin "20 6 * * *" "$SS_MERLIN_HOME/tools/upgrade.sh"
@@ -84,7 +81,7 @@ install() {
   echo -e "$ansi_yellow Copy and edit your shadowsocks configuration file at: /opt/share/ss-merlin/etc/shadowsocks/config.sample.json $ansi_std"
   echo -e "$ansi_yellow and shadowsocks-asuswrt-merlin configuration file at: /opt/share/ss-merlin/etc/ss-merlin.sample.conf $ansi_std"
   echo "Type ss-merlin to get all supported arguments."
-  echo "Get more details and give us a feedback at https://github.com/Acris/shadowsocks-asuswrt-merlin."
+  echo "Get more details and give us a feedback at https://github.com/bnuhero/shadowsocks-asuswrt-merlin."
 }
 
 install

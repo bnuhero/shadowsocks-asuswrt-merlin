@@ -33,7 +33,7 @@ if git pull; then
   echo "/___/_//_/\_,_/\_,_/\___/__,__/___/\___/\__/_/\_\/___/ "
   echo "   ..has been updated and/or is at the current version!"
   echo -e "$ansi_std"
-  echo "Give us a feedback at https://github.com/Acris/shadowsocks-asuswrt-merlin."
+  echo "Give us a feedback at https://github.com/bnuhero/shadowsocks-asuswrt-merlin."
 else
   echo -e "$ansi_red There was an error updating. Try again later? $ansi_std"
 fi

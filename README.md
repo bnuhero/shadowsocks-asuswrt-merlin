@@ -28,10 +28,10 @@ opkg install ca-certificates git-http wget
 shadowsocks-asuswrt-merlin is installed by running the following commands in your terminal:
 ```sh
 # For Broadcom SDK6/SDK7 ARM platform (RT-AC56 upto RT-AC5300)
-sh -c "$(wget https://raw.githubusercontent.com/Acris/shadowsocks-asuswrt-merlin/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/bnuhero/shadowsocks-asuswrt-merlin/master/tools/install.sh -O -)"
 
 # For Broadcom HND ARM platform (RT-AC86U) and HND AX ARM (RT-AX88U)
-sh -c "$(wget https://raw.githubusercontent.com/Acris/shadowsocks-asuswrt-merlin/hnd/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/bnuhero/shadowsocks-asuswrt-merlin/hnd/tools/install.sh -O -)"
 ```
 
 ### Configuration
@@ -109,7 +109,7 @@ Thanks for the following awesome projects ❤️
 - [asuswrt-merlin.ng](https://github.com/RMerl/asuswrt-merlin.ng)
 - [Entware](https://github.com/Entware/Entware)
 - [asuswrt-merlin-transparent-proxy](https://github.com/zw963/asuswrt-merlin-transparent-proxy)
-- [unbound](https://nlnetlabs.nl/projects/unbound/about/)
+- [https_dns_proxy](https://github.com/aarond10/https_dns_proxy)
 - [dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
 - [gfwlist](https://github.com/gfwlist/gfwlist)
 - [gfwlist2dnsmasq](https://github.com/cokebar/gfwlist2dnsmasq)

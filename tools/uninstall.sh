@@ -30,10 +30,11 @@ uninstall() {
   cru d statistics
 
   echo -e "$ansi_green Removing packages... $ansi_std"
-  opkg remove --autoremove unbound haveged
+  opkg remove --autoremove https_dns_proxy haveged
 
   echo -e "$ansi_green Deleting system links... $ansi_std"
   rm -f /opt/bin/ss-merlin
+  rm -f /opt/bin/ss-local
   rm -f /opt/bin/ss-redir
   rm -f /opt/bin/v2ray-plugin
 
